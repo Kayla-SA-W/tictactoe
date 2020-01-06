@@ -1,5 +1,6 @@
 'use strict'
 require('../../../index.js')
+const api = require('../api')
 
 // const onSpaceZero = (event) => {
 //   if (playerOne) {
@@ -276,6 +277,24 @@ const checkWinnerO = () => {
   }
 }
 
+const startGame = () => {
+  for (let i = 0; i < gameboard.length; i++) {
+    gameboard[i] = ' '
+  }
+  console.log(gameboard)
+  // $('#gameMessage').text('Player One, your turn')
+  // $('#spaceZero').text(' ')
+  // $('#spaceOne').text(' ')
+  // $('#spaceTwo').text(' ')
+  // $('#spaceThree').text(' ')
+  // $('#spaceFour').text(' ')
+  // $('#spaceFive').text(' ')
+  // $('#spaceSix').text(' ')
+  // $('#spaceSeven').text(' ')
+  // $('#spaceEight').text(' ')
+  // gameOver = false
+}
+
 const addHandlers = () => {
   $('#spaceZero').on('click', playerTurnZero)
   $('#spaceOne').on('click', playerTurnOne)
@@ -286,6 +305,7 @@ const addHandlers = () => {
   $('#spaceSix').on('click', playerTurnSix)
   $('#spaceSeven').on('click', playerTurnSeven)
   $('#spaceEight').on('click', playerTurnEight)
+  $('#gameStarter').on('Click', startGame)
 }
 
 module.exports = {
