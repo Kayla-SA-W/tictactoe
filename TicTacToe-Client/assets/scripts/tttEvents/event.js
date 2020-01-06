@@ -2,13 +2,6 @@
 require('../../../index.js')
 const api = require('../api')
 
-// const onSpaceZero = (event) => {
-//   if (playerOne) {
-//     $('#spaceZero').text('x')
-//   } else {
-//     $('#spaceZero').text('o')
-//   }
-// }
 let playerOne = true
 let gameOver = false
 const gameboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
@@ -243,8 +236,13 @@ const checkWinnerX = () => {
   } else if (gameboard[2] === 'x' && gameboard[5] === 'x' && gameboard[8] === 'x') {
     $('#gameMessage').text('Player One Wins!')
     gameOver = true
-  } else {
-    gameOver = false
+  } else if (!gameOver) {
+    if (!gameboard.includes(' ')) {
+      gameOver = true
+      $('#gameMessage').text('It is a Tie!')
+    } else {
+      gameOver = false
+    }
   }
 }
 const checkWinnerO = () => {
@@ -272,8 +270,13 @@ const checkWinnerO = () => {
   } else if (gameboard[2] === 'o' && gameboard[5] === 'o' && gameboard[8] === 'o') {
     $('#gameMessage').text('Player Two Wins!')
     gameOver = true
-  } else {
-    gameOver = false
+  } else if (!gameOver) {
+    if (!gameboard.includes(' ')) {
+      gameOver = true
+      $('#gameMessage').text('It is a Tie!')
+    } else {
+      gameOver = false
+    }
   }
 }
 
@@ -281,18 +284,17 @@ const startGame = () => {
   for (let i = 0; i < gameboard.length; i++) {
     gameboard[i] = ' '
   }
-  console.log(gameboard)
-  // $('#gameMessage').text('Player One, your turn')
-  // $('#spaceZero').text(' ')
-  // $('#spaceOne').text(' ')
-  // $('#spaceTwo').text(' ')
-  // $('#spaceThree').text(' ')
-  // $('#spaceFour').text(' ')
-  // $('#spaceFive').text(' ')
-  // $('#spaceSix').text(' ')
-  // $('#spaceSeven').text(' ')
-  // $('#spaceEight').text(' ')
-  // gameOver = false
+  $('#gameMessage').text('Player One, your turn')
+  $('#spaceZero').text(' ')
+  $('#spaceOne').text(' ')
+  $('#spaceTwo').text(' ')
+  $('#spaceThree').text(' ')
+  $('#spaceFour').text(' ')
+  $('#spaceFive').text(' ')
+  $('#spaceSix').text(' ')
+  $('#spaceSeven').text(' ')
+  $('#spaceEight').text(' ')
+  gameOver = false
 }
 
 const addHandlers = () => {
@@ -305,7 +307,7 @@ const addHandlers = () => {
   $('#spaceSix').on('click', playerTurnSix)
   $('#spaceSeven').on('click', playerTurnSeven)
   $('#spaceEight').on('click', playerTurnEight)
-  $('#gameStarter').on('Click', startGame)
+  $('#gameStarter').on('click', startGame)
 }
 
 module.exports = {
