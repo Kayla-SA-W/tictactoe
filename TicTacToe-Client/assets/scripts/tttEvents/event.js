@@ -1,6 +1,6 @@
 'use strict'
 require('../../../index.js')
-const api = require('../api')
+// const api = require('../api')
 
 // const onSpaceZero = (event) => {
 //   if (playerOne) {
@@ -12,7 +12,7 @@ const api = require('../api')
 let playerOne = true
 let gameOver = false
 const gameboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-const playerTurnZero = (event) => {
+const playerTurnZero = () => {
   if (!gameOver) {
     if (gameboard[0] === ' ') {
       if (playerOne) {
@@ -34,7 +34,7 @@ const playerTurnZero = (event) => {
     $('#gameMessage').text('Please start a new game')
   }
 }
-const playerTurnOne = (event) => {
+const playerTurnOne = () => {
   if (!gameOver) {
     if (gameboard[1] === ' ') {
       if (playerOne) {
@@ -56,7 +56,7 @@ const playerTurnOne = (event) => {
     $('#gameMessage').text('Please start a new game')
   }
 }
-const playerTurnTwo = (event) => {
+const playerTurnTwo = () => {
   if (!gameOver) {
     if (gameboard[2] === ' ') {
       if (playerOne) {
@@ -78,7 +78,7 @@ const playerTurnTwo = (event) => {
     $('#gameMessage').text('Please start a new game')
   }
 }
-const playerTurnThree = (event) => {
+const playerTurnThree = () => {
   if (!gameOver) {
     if (gameboard[3] === ' ') {
       if (playerOne) {
@@ -100,7 +100,7 @@ const playerTurnThree = (event) => {
     $('#gameMessage').text('Please start a new game')
   }
 }
-const playerTurnFour = (event) => {
+const playerTurnFour = () => {
   if (!gameOver) {
     if (gameboard[4] === ' ') {
       if (playerOne) {
@@ -122,7 +122,7 @@ const playerTurnFour = (event) => {
     $('#gameMessage').text('Please start a new game')
   }
 }
-const playerTurnFive = (event) => {
+const playerTurnFive = () => {
   if (!gameOver) {
     if (gameboard[5] === ' ') {
       if (playerOne) {
@@ -144,7 +144,7 @@ const playerTurnFive = (event) => {
     $('#gameMessage').text('Please start a new game')
   }
 }
-const playerTurnSix = (event) => {
+const playerTurnSix = () => {
   if (!gameOver) {
     if (gameboard[6] === ' ') {
       if (playerOne) {
@@ -166,7 +166,7 @@ const playerTurnSix = (event) => {
     $('#gameMessage').text('Please start a new game')
   }
 }
-const playerTurnSeven = (event) => {
+const playerTurnSeven = () => {
   if (!gameOver) {
     if (gameboard[7] === ' ') {
       if (playerOne) {
@@ -188,7 +188,7 @@ const playerTurnSeven = (event) => {
     $('#gameMessage').text('Please start a new game')
   }
 }
-const playerTurnEight = (event) => {
+const playerTurnEight = () => {
   if (!gameOver) {
     if (gameboard[8] === ' ') {
       if (playerOne) {
@@ -210,6 +210,12 @@ const playerTurnEight = (event) => {
     $('#gameMessage').text('Please start a new game')
   }
 }
+
+// Simplify by creating an array of HTML message names that loops through and finds the corresponding one
+// const lookUpArray = []
+// const playerTurn = (event) => {
+// const index = lookUpArray.indexOf(event.target.id)
+// }
 
 const checkWinner = () => {
   if (playerOne === false) {
@@ -243,6 +249,13 @@ const checkWinnerX = () => {
   } else if (gameboard[2] === 'x' && gameboard[5] === 'x' && gameboard[8] === 'x') {
     $('#gameMessage').text('Player One Wins!')
     gameOver = true
+  } else if (!gameOver) {
+    if (gameboard.includes(' ')) {
+      gameOver = false
+    } else {
+      gameOver = true
+      $('#gameMessage').text('It is a Tie!')
+    }
   } else {
     gameOver = false
   }
@@ -281,18 +294,17 @@ const startGame = () => {
   for (let i = 0; i < gameboard.length; i++) {
     gameboard[i] = ' '
   }
-  console.log(gameboard)
-  // $('#gameMessage').text('Player One, your turn')
-  // $('#spaceZero').text(' ')
-  // $('#spaceOne').text(' ')
-  // $('#spaceTwo').text(' ')
-  // $('#spaceThree').text(' ')
-  // $('#spaceFour').text(' ')
-  // $('#spaceFive').text(' ')
-  // $('#spaceSix').text(' ')
-  // $('#spaceSeven').text(' ')
-  // $('#spaceEight').text(' ')
-  // gameOver = false
+  $('#gameMessage').text('Player One, your turn')
+  $('#spaceZero').text(' ')
+  $('#spaceOne').text(' ')
+  $('#spaceTwo').text(' ')
+  $('#spaceThree').text(' ')
+  $('#spaceFour').text(' ')
+  $('#spaceFive').text(' ')
+  $('#spaceSix').text(' ')
+  $('#spaceSeven').text(' ')
+  $('#spaceEight').text(' ')
+  gameOver = false
 }
 
 const addHandlers = () => {
@@ -305,7 +317,7 @@ const addHandlers = () => {
   $('#spaceSix').on('click', playerTurnSix)
   $('#spaceSeven').on('click', playerTurnSeven)
   $('#spaceEight').on('click', playerTurnEight)
-  $('#gameStarter').on('Click', startGame)
+  $('#gameStarter').on('click', startGame)
 }
 
 module.exports = {

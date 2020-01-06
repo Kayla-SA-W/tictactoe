@@ -10,4 +10,5 @@ const reset = formData => {
 }
 
 module.exports = {
+  reset
 }
