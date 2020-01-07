@@ -1,6 +1,6 @@
 'use strict'
 require('../../../index.js')
-// const store = require('./../store')
+const store = require('./../store')
 const ui = require('../ui')
 const api = require('../api')
 const getFormFields = require('./../../../lib/get-form-fields')
@@ -8,17 +8,20 @@ const getFormFields = require('./../../../lib/get-form-fields')
 let playerOne = true
 let gameOver = false
 const gameboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-const playerTurnZero = (event) => {
+// const boardSpaces = ['spaceZero', 'spaceOne', 'spaceTwo', 'spaceThree', 'spaceFour', 'spaceFive', 'spaceSix', 'spaceSeven', 'SpaceEight']
+const playerTurnZero = () => {
   if (!gameOver) {
     if (gameboard[0] === ' ') {
       if (playerOne) {
         gameboard[0] = 'x'
         $('#spaceZero').text('x')
         $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[0] = 'o'
         $('#spaceZero').text('o')
+        store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -29,19 +32,22 @@ const playerTurnZero = (event) => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
+  store.game.cells.id = 0
   updateGame()
 }
-const playerTurnOne = (event) => {
+const playerTurnOne = () => {
   if (!gameOver) {
     if (gameboard[1] === ' ') {
       if (playerOne) {
         gameboard[1] = 'x'
         $('#spaceOne').text('x')
         $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[1] = 'o'
         $('#spaceOne').text('o')
+        store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -52,18 +58,22 @@ const playerTurnOne = (event) => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
+  store.game.cells.id = 1
+  updateGame()
 }
-const playerTurnTwo = (event) => {
+const playerTurnTwo = () => {
   if (!gameOver) {
     if (gameboard[2] === ' ') {
       if (playerOne) {
         gameboard[2] = 'x'
         $('#spaceTwo').text('x')
+        store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[2] = 'o'
         $('#spaceTwo').text('o')
+        store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -74,18 +84,22 @@ const playerTurnTwo = (event) => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
+  store.game.cells.id = 2
+  updateGame()
 }
-const playerTurnThree = (event) => {
+const playerTurnThree = () => {
   if (!gameOver) {
     if (gameboard[3] === ' ') {
       if (playerOne) {
         gameboard[3] = 'x'
         $('#spaceThree').text('x')
+        store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[3] = 'o'
         $('#spaceThree').text('o')
+        store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -96,18 +110,22 @@ const playerTurnThree = (event) => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
+  store.game.cells.id = 3
+  updateGame()
 }
-const playerTurnFour = (event) => {
+const playerTurnFour = () => {
   if (!gameOver) {
     if (gameboard[4] === ' ') {
       if (playerOne) {
         gameboard[4] = 'x'
         $('#spaceFour').text('x')
+        store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[4] = 'o'
         $('#spaceFour').text('o')
+        store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -118,18 +136,22 @@ const playerTurnFour = (event) => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
+  store.game.cells.id = 4
+  updateGame()
 }
-const playerTurnFive = (event) => {
+const playerTurnFive = () => {
   if (!gameOver) {
     if (gameboard[5] === ' ') {
       if (playerOne) {
         gameboard[5] = 'x'
         $('#spaceFive').text('x')
+        store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[5] = 'o'
         $('#spaceFive').text('o')
+        store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -140,18 +162,22 @@ const playerTurnFive = (event) => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
+  store.game.cells.id = 5
+  updateGame()
 }
-const playerTurnSix = (event) => {
+const playerTurnSix = () => {
   if (!gameOver) {
     if (gameboard[6] === ' ') {
       if (playerOne) {
         gameboard[6] = 'x'
         $('#spaceSix').text('x')
+        store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[6] = 'o'
         $('#spaceSix').text('o')
+        store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -162,18 +188,22 @@ const playerTurnSix = (event) => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
+  store.game.cells.id = 6
+  updateGame()
 }
-const playerTurnSeven = (event) => {
+const playerTurnSeven = () => {
   if (!gameOver) {
     if (gameboard[7] === ' ') {
       if (playerOne) {
         gameboard[7] = 'x'
         $('#spaceSeven').text('x')
+        store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[7] = 'o'
         $('#spaceSeven').text('o')
+        store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -184,18 +214,22 @@ const playerTurnSeven = (event) => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
+  store.game.cells.id = 7
+  updateGame()
 }
-const playerTurnEight = (event) => {
+const playerTurnEight = () => {
   if (!gameOver) {
     if (gameboard[8] === ' ') {
       if (playerOne) {
         gameboard[8] = 'x'
         $('#spaceEight').text('x')
+        store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[8] = 'o'
         $('#spaceEight').text('o')
+        store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -206,6 +240,8 @@ const playerTurnEight = (event) => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
+  store.game.cells.id = 8
+  updateGame()
 }
 
 const checkWinner = () => {

@@ -62,7 +62,7 @@ const updateGame = data => {
       'game': {
         'cell': {
           'index': store.game.cells.id,
-          'value': 'x' // value of current turn
+          'value': store.currentPlayer
         },
         'over': false
       }
