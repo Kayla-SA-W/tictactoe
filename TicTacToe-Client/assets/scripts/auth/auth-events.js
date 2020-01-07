@@ -25,10 +25,20 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+const onChangePw = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+  api.changePw(data)
+    .then(ui.changePwSuccess)
+    .catch(ui.changePwFailure)
+}
+
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-  // $('#change-pw').on('submit', onChangePw)
+  $('#change-pw').on('submit', onChangePw)
   // $('#logout').on('sumbit', onLogout)
 }
 
