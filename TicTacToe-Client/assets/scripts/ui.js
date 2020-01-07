@@ -3,10 +3,12 @@ const store = require('./store')
 
 const signUpSuccess = function (response) {
   $('#signUpMessage').text('successfully signed up!')
+  $('#sign-up').trigger('reset')
 }
 
 const signUpFailure = function () {
   $('#signUpMessage').text('sign up failure!')
+  $('#sign-up').trigger('reset')
 }
 
 const signInSuccess = function (response) {
@@ -21,18 +23,37 @@ const signInSuccess = function (response) {
   $('#sign-up').hide()
   $('#createExample').show()
   $('#logoutMessage').text('')
+  $('#sign-in').trigger('reset')
 }
 
 const signInFailure = function () {
   $('#signInMessage').text('Unable to Sign In!')
+  $('#sign-in').trigger('reset')
 }
 
 const changePwSuccess = function (response) {
   $('#pwChangeMessage').text('successfully changed password!')
+  $('#change-pw').trigger('reset')
 }
 
 const changePwFailure = function () {
   $('#pwChangeMessage').text('could not change password!')
+  $('#change-pw').trigger('reset')
+}
+
+const signOutSuccess = function (response) {
+  $('#logoutMessage').text('successfully signed out!')
+  $('#sign-in').trigger('reset')
+  $('#change-pw').hide()
+  $('#logout').hide()
+  $('#sign-in').show()
+  $('#sign-up').show()
+  $('#signInMessage').text('')
+  $('#createExample').hide()
+}
+
+const signOutFailure = function () {
+  $('#logoutMessage').text('could not sign out!')
 }
 
 module.exports = {
@@ -41,5 +62,7 @@ module.exports = {
   signInSuccess,
   signInFailure,
   changePwSuccess,
-  changePwFailure
+  changePwFailure,
+  signOutFailure,
+  signOutSuccess
 }
