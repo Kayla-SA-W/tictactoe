@@ -56,6 +56,15 @@ const signOutFailure = function () {
   $('#logoutMessage').text('could not sign out!')
 }
 
+const createGameSuccess = response => {
+  $('#quick-test').text('successfully created game!')
+  store.game = response.game
+}
+
+const createGameFailure = response => {
+  $('#quick-test').text('no game created!')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -64,5 +73,7 @@ module.exports = {
   changePwSuccess,
   changePwFailure,
   signOutFailure,
-  signOutSuccess
+  signOutSuccess,
+  createGameSuccess,
+  createGameFailure
 }
