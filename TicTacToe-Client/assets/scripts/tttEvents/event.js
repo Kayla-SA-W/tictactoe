@@ -1,6 +1,7 @@
 'use strict'
 require('../../../index.js')
 const api = require('../api')
+const getFormFields = require('./../../../lib/get-form-fields')
 
 let playerOne = true
 let gameOver = false
@@ -295,7 +296,39 @@ const startGame = () => {
   $('#spaceSeven').text(' ')
   $('#spaceEight').text(' ')
   gameOver = false
+  // showBoard()
 }
+
+const createGame = event => {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  // console.log(data)
+
+  api.createGame(data)
+    .then(console.log('created new game'))
+    .catch()
+}
+// const showBoard = () => {
+//   $('#gameBoard').show()
+// }
+
+// const updateGame = event => {
+//   event.preventDefault()
+//   const form = event.target
+//   const data = {
+//   "game": {
+//     "cell": {
+//       "index": data-cell-index,
+//       "value": "x" //value of current turn
+//     },
+//     "over": false
+//   }
+// }
+//   api.updateGame(data)
+//     .then(console.log('updated new game'))
+//     .catch(console.error)
+// }
 
 const addHandlers = () => {
   $('#spaceZero').on('click', playerTurnZero)
@@ -307,7 +340,7 @@ const addHandlers = () => {
   $('#spaceSix').on('click', playerTurnSix)
   $('#spaceSeven').on('click', playerTurnSeven)
   $('#spaceEight').on('click', playerTurnEight)
-  $('#gameStarter').on('click', startGame)
+  $('#gameStarter').on('click', startGame, createGame)
 }
 
 module.exports = {
