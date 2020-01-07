@@ -9,6 +9,8 @@ const apiEvents = require('./apiEvents')
 // require('./example')
 
 $(() => {
+  $('#logout').hide()
+  $('#change-pw').hide()
   gameEvents.addHandlers()
   authEvents.addHandlers()
   apiEvents.addHandlers()
