@@ -51,19 +51,30 @@ const createGame = data => {
   })
 }
 
-// const updateGame = data => {
-//   return $.ajax({
-//     url: config.apiUrl + '/games/',
-//     method: 'PATCH',
-//     data: data
-//   })
-// }
+const updateGame = data => {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'game': {
+        'cell': {
+          'index': store.game.cells.id,
+          'value': 'x' // value of current turn
+        },
+        'over': false
+      }
+    }
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   changePw,
   signOut,
-  createGame
-  // updateGame
+  createGame,
+  updateGame
 }
