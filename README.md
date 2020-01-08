@@ -3,7 +3,8 @@
 Two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. - [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 ## Important Links --->>
-Deployed Site: https://kayla-sa-w.github.io/tictactoe/ 
+Deployed Site: https://kayla-sa-w.github.io/tictactoe/
+
 Commit History: https://github.com/Kayla-SA-W/TicTacToe-Client/commits/master
 
 ## Planning Story --->>>
@@ -35,6 +36,6 @@ I would still like to style my page
 
 ## Images --->>>
 ### Wireframes:
-![alt text] (/public/IMG_0422)
+![alt text] (https://imgur.com/owxz4OG)
 
-![alt text] (/public/IMG_0425)
+![alt text] (https://imgur.com/mi6k48T)
