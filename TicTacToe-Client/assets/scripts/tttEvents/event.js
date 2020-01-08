@@ -290,7 +290,6 @@ const checkWinnerX = () => {
     $('#gameMessage').text('Player One Wins!')
     gameOver = true
   } else if (!gameOver) {
-<<<<<<< HEAD
     if (gameboard.includes(' ')) {
       gameOver = false
     } else {
@@ -299,14 +298,6 @@ const checkWinnerX = () => {
     }
   } else {
     gameOver = false
-=======
-    if (!gameboard.includes(' ')) {
-      gameOver = true
-      $('#gameMessage').text('It is a Tie!')
-    } else {
-      gameOver = false
-    }
->>>>>>> apiSpecs
   }
 }
 const checkWinnerO = () => {
