@@ -6,6 +6,7 @@ designs I settled on one to be the final outcome of my project.
 After choosing a wireframe I walked myself through how to play tic tac toe and how you would win the game. I drew out a tic tac toe board and wrote out the possible winning combinations and created an array they housed them. After going over all of the properties and rules I wanted to have for my tic tac toe game I began to plan how I would want the game to work with javascript. I decided I wanted my game board to be represented by an array of blank strings that would be updated on a click. It would check who the current player was and make the corresponding spot with the correct player (based on if player one was true or false). Then it would run the check winner function which compared the current winner array to the current gameboard array. If there was a winner it would display the winner or if it was a tie, it would display the tie.
 
 To view my commit history please checkout: ![gitHub] (https://github.com/Kayla-SA-W/TicTacToe-Client/commits/master)
+
 User Stories
 --->>>
 As a user, I want to be able to replay the game without refreshing the page so that is doesnt interrupt game flow
