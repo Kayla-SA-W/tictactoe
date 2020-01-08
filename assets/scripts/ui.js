@@ -18,6 +18,8 @@ const signInSuccess = function (response) {
   $('#change-pw').show()
   $('#sign-in').hide()
   $('#sign-up').hide()
+  $('#gameStarter').show()
+  $('pastGames').show()
   $('#createExample').show()
   $('#logoutMessage').text('')
   $('#sign-in').trigger('reset')
@@ -45,6 +47,8 @@ const signOutSuccess = function (response) {
   $('#logout').hide()
   $('#sign-in').show()
   $('#sign-up').show()
+  $('#gameStarter').hide()
+  $('pastGames').hide()
   $('#signInMessage').text('')
   $('#createExample').hide()
 }

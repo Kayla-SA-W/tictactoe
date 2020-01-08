@@ -9,8 +9,10 @@ const authEvents = require('./auth/auth-events')
 // require('./example')
 
 $(() => {
+  $('#gameStarter').hide()
+  $('pastGames').hide()
   $('#logout').hide()
-  // $('#gameBoard').hide()
+  $('#gameBoard').hide()
   $('#change-pw').hide()
   gameEvents.addHandlers()
   authEvents.addHandlers()
