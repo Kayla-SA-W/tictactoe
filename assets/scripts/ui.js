@@ -2,8 +2,9 @@
 const store = require('./store')
 
 const signUpSuccess = function (response) {
-  $('#signUpMessage').text('successfully signed up!').show('fast')
+  $('#signUpMessage').text('successfully signed up!')
   $('#sign-up').trigger('reset')
+  $('#signUpMessage').text(' ')
 }
 
 const signUpFailure = function () {
