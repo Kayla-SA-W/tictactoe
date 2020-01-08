@@ -14,5 +14,4 @@ $(() => {
   $('#change-pw').hide()
   gameEvents.addHandlers()
   authEvents.addHandlers()
-  // apiEvents.addHandlers()
 })

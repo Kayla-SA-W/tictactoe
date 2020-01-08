@@ -8,20 +8,22 @@ const getFormFields = require('./../../../lib/get-form-fields')
 let playerOne = true
 let gameOver = false
 const gameboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-// const boardSpaces = ['spaceZero', 'spaceOne', 'spaceTwo', 'spaceThree', 'spaceFour', 'spaceFive', 'spaceSix', 'spaceSeven', 'SpaceEight']
 const playerTurnZero = () => {
   if (!gameOver) {
     if (gameboard[0] === ' ') {
+      store.game.cells.id = 0
       if (playerOne) {
         gameboard[0] = 'x'
         $('#spaceZero').text('x')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
+        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[0] = 'o'
         $('#spaceZero').text('o')
         store.currentPlayer = 'o'
+        updateGame()
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -32,23 +34,24 @@ const playerTurnZero = () => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
-  store.game.cells.id = 0
-  updateGame()
 }
 const playerTurnOne = () => {
   if (!gameOver) {
     if (gameboard[1] === ' ') {
+      store.game.cells.id = 1
       if (playerOne) {
         gameboard[1] = 'x'
         $('#spaceOne').text('x')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
+        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[1] = 'o'
         $('#spaceOne').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
+        updateGame()
         playerOne = true
       }
     } else {
@@ -58,23 +61,24 @@ const playerTurnOne = () => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
-  store.game.cells.id = 1
-  updateGame()
 }
 const playerTurnTwo = () => {
   if (!gameOver) {
     if (gameboard[2] === ' ') {
+      store.game.cells.id = 2
       if (playerOne) {
         gameboard[2] = 'x'
         $('#spaceTwo').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
+        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[2] = 'o'
         $('#spaceTwo').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
+        updateGame()
         playerOne = true
       }
     } else {
@@ -84,23 +88,24 @@ const playerTurnTwo = () => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
-  store.game.cells.id = 2
-  updateGame()
 }
 const playerTurnThree = () => {
   if (!gameOver) {
     if (gameboard[3] === ' ') {
+      store.game.cells.id = 3
       if (playerOne) {
         gameboard[3] = 'x'
         $('#spaceThree').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
+        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[3] = 'o'
         $('#spaceThree').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
+        updateGame()
         playerOne = true
       }
     } else {
@@ -110,23 +115,24 @@ const playerTurnThree = () => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
-  store.game.cells.id = 3
-  updateGame()
 }
 const playerTurnFour = () => {
   if (!gameOver) {
     if (gameboard[4] === ' ') {
+      store.game.cells.id = 4
       if (playerOne) {
         gameboard[4] = 'x'
         $('#spaceFour').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
+        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[4] = 'o'
         $('#spaceFour').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
+        updateGame()
         playerOne = true
       }
     } else {
@@ -136,23 +142,24 @@ const playerTurnFour = () => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
-  store.game.cells.id = 4
-  updateGame()
 }
 const playerTurnFive = () => {
   if (!gameOver) {
     if (gameboard[5] === ' ') {
+      store.game.cells.id = 5
       if (playerOne) {
         gameboard[5] = 'x'
         $('#spaceFive').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
+        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[5] = 'o'
         $('#spaceFive').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
+        updateGame()
         playerOne = true
       }
     } else {
@@ -162,23 +169,24 @@ const playerTurnFive = () => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
-  store.game.cells.id = 5
-  updateGame()
 }
 const playerTurnSix = () => {
   if (!gameOver) {
     if (gameboard[6] === ' ') {
+      store.game.cells.id = 6
       if (playerOne) {
         gameboard[6] = 'x'
         $('#spaceSix').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
+        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[6] = 'o'
         $('#spaceSix').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
+        updateGame()
         playerOne = true
       }
     } else {
@@ -188,23 +196,24 @@ const playerTurnSix = () => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
-  store.game.cells.id = 6
-  updateGame()
 }
 const playerTurnSeven = () => {
   if (!gameOver) {
     if (gameboard[7] === ' ') {
+      store.game.cells.id = 7
       if (playerOne) {
         gameboard[7] = 'x'
         $('#spaceSeven').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
+        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[7] = 'o'
         $('#spaceSeven').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
+        updateGame()
         playerOne = true
       }
     } else {
@@ -214,23 +223,24 @@ const playerTurnSeven = () => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
-  store.game.cells.id = 7
-  updateGame()
 }
 const playerTurnEight = () => {
   if (!gameOver) {
     if (gameboard[8] === ' ') {
+      store.game.cells.id = 8
       if (playerOne) {
         gameboard[8] = 'x'
         $('#spaceEight').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
+        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[8] = 'o'
         $('#spaceEight').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
+        updateGame()
         playerOne = true
       }
     } else {
@@ -240,8 +250,6 @@ const playerTurnEight = () => {
   } else {
     $('#gameMessage').text('Please start a new game')
   }
-  store.game.cells.id = 8
-  updateGame()
 }
 
 const checkWinner = () => {
@@ -250,7 +258,10 @@ const checkWinner = () => {
   } else if (playerOne === true) {
     checkWinnerO()
   }
+  // store.game.over = gameOver
+  // console.log(store.game.over)
 }
+
 const checkWinnerX = () => {
   if (gameboard[0] === 'x' && gameboard[1] === 'x' && gameboard[2] === 'x') {
     $('#gameMessage').text('Player One Wins!')
@@ -334,7 +345,9 @@ const startGame = () => {
   $('#spaceSix').text(' ')
   $('#spaceSeven').text(' ')
   $('#spaceEight').text(' ')
+
   gameOver = false
+  playerOne = true
   showBoard()
 }
 const showBoard = () => {
@@ -352,12 +365,20 @@ const createGame = event => {
 }
 
 const updateGame = () => {
-  event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
+
   api.updateGame(data)
-    .then(console.log('updated new game'))
+    .then(ui.onUpdateSuccess)
     .catch(console.error)
+}
+
+const getPastGames = (event) => {
+  const form = event.target
+  const data = getFormFields(form)
+  api.getPastGames(data)
+    .then(ui.onGetPastGamesSuccess)
+    .catch(ui.onGetPastGamesFailure)
 }
 
 const addHandlers = () => {
@@ -372,6 +393,7 @@ const addHandlers = () => {
   $('#spaceEight').on('click', playerTurnEight)
   $('#gameStarter').on('click', startGame)
   $('#gameStarter').on('click', createGame)
+  $('#pastGames').on('click', getPastGames)
 }
 
 module.exports = {

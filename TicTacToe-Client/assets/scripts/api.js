@@ -64,8 +64,18 @@ const updateGame = data => {
           'index': store.game.cells.id,
           'value': store.currentPlayer
         },
-        'over': false
+        'over': store.game.over
       }
+    }
+  })
+}
+
+const getPastGames = data => {
+  return $.ajax({
+    url: config.apiUrl + '/games/?over=true',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
@@ -76,5 +86,6 @@ module.exports = {
   changePw,
   signOut,
   createGame,
-  updateGame
+  updateGame,
+  getPastGames
 }
