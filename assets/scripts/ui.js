@@ -4,7 +4,6 @@ const store = require('./store')
 const signUpSuccess = function (response) {
   $('#signUpMessage').text('successfully signed up!')
   $('#sign-up').trigger('reset')
-  $('#signUpMessage').text(' ')
 }
 
 const signUpFailure = function () {
@@ -13,7 +12,7 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (response) {
-  $('#signInMessage').text('successfully signed in!')
+  $('#signInSuccessMessage').show('slow')
   store.user = response.user
   $('#logout').show()
   $('#change-pw').show()
@@ -23,6 +22,7 @@ const signInSuccess = function (response) {
   $('#pastGames').show()
   $('#logoutMessage').text('')
   $('#sign-in').trigger('reset')
+  $('#signUpMessage').text(' ')
 }
 
 const signInFailure = function () {

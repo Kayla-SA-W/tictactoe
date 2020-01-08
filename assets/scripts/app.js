@@ -9,6 +9,7 @@ const authEvents = require('./auth/auth-events')
 // require('./example')
 
 $(() => {
+  $('#signInSuccessMessage').hide()
   $('#gameStarter').hide()
   $('#pastGames').hide()
   $('#logout').hide()
