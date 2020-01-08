@@ -12,7 +12,7 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (response) {
-  $('#signInSuccessMessage').show('slow')
+  $('#signInMessage').text('successfully Signed In!')
   store.user = response.user
   $('#logout').show()
   $('#change-pw').show()
@@ -22,7 +22,7 @@ const signInSuccess = function (response) {
   $('#pastGames').show()
   $('#logoutMessage').text('')
   $('#sign-in').trigger('reset')
-  $('#signUpMessage').text(' ')
+  $('#signUpMessage').text('')
 }
 
 const signInFailure = function () {
@@ -33,6 +33,7 @@ const signInFailure = function () {
 const changePwSuccess = function (response) {
   $('#pwChangeMessage').text('successfully changed password!')
   $('#change-pw').trigger('reset')
+  $('#signInMessage').text('')
 }
 
 const changePwFailure = function () {
@@ -50,6 +51,7 @@ const signOutSuccess = function (response) {
   $('#gameStarter').hide()
   $('#pastGames').hide()
   $('#signInMessage').text('')
+  $('pwChangeMessage').text('')
 }
 
 const signOutFailure = function () {
