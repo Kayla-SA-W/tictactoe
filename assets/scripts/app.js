@@ -10,7 +10,7 @@ const authEvents = require('./auth/auth-events')
 
 $(() => {
   $('#gameStarter').hide()
-  $('pastGames').hide()
+  $('#pastGames').hide()
   $('#logout').hide()
   $('#gameBoard').hide()
   $('#change-pw').hide()
