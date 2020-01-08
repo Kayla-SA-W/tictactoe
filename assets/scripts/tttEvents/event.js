@@ -14,13 +14,13 @@ const playerTurnZero = () => {
       store.game.cells.id = 0
       if (playerOne) {
         gameboard[0] = 'x'
-        $('#spaceZero').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#spaceZero').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[0] = 'o'
-        $('#spaceZero').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceZero').html('<img src="./public/img/bluemoon.jpg" height="30" width="30">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -40,13 +40,13 @@ const playerTurnOne = () => {
       store.game.cells.id = 1
       if (playerOne) {
         gameboard[1] = 'x'
-        $('#spaceOne').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#spaceOne').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[1] = 'o'
-        $('#spaceOne').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceOne').html('<img src="./public/img/bluemoon.jpg" height="30" width="30">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -66,13 +66,13 @@ const playerTurnTwo = () => {
       store.game.cells.id = 2
       if (playerOne) {
         gameboard[2] = 'x'
-        $('#spaceTwo').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#spaceTwo').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[2] = 'o'
-        $('#spaceTwo').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceTwo').html('<img src="./public/img/bluemoon.jpg" height="30" width="30">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -92,13 +92,13 @@ const playerTurnThree = () => {
       store.game.cells.id = 0
       if (playerOne) {
         gameboard[3] = 'x'
-        $('#spaceThree').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#spaceThree').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[3] = 'o'
-        $('#spaceThree').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceThree').html('<img src="./public/img/bluemoon.jpg" height="30" width="30">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -118,13 +118,13 @@ const playerTurnFour = () => {
       store.game.cells.id = 0
       if (playerOne) {
         gameboard[4] = 'x'
-        $('#spaceFour').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#spaceFour').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[4] = 'o'
-        $('#spaceFour').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceFour').html('<img src="./public/img/bluemoon.jpg" height="30" width="30">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -144,13 +144,13 @@ const playerTurnFive = () => {
       store.game.cells.id = 0
       if (playerOne) {
         gameboard[5] = 'x'
-        $('#spaceFive').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#spaceFive').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[5] = 'o'
-        $('#spaceFive').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceFive').html('<img src="./public/img/bluemoon.jpg" height="30" width="30">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -170,13 +170,13 @@ const playerTurnSix = () => {
       store.game.cells.id = 0
       if (playerOne) {
         gameboard[6] = 'x'
-        $('#spaceSix').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#spaceSix').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[6] = 'o'
-        $('#spaceSix').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceSix').html('<img src="./public/img/bluemoon.jpg" height="30" width="30">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -196,13 +196,13 @@ const playerTurnSeven = () => {
       store.game.cells.id = 7
       if (playerOne) {
         gameboard[7] = 'x'
-        $('#spaceSeven').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#spaceSeven').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[7] = 'o'
-        $('#spaceSeven').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceSeven').html('<img src="./public/img/bluemoon.jpg" height="30" width="30">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -222,13 +222,13 @@ const playerTurnEight = () => {
       store.game.cells.id = 8
       if (playerOne) {
         gameboard[8] = 'x'
-        $('#spaceEight').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#spaceEight').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[8] = 'o'
-        $('#spaceEight').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceEight').html('<img src="./public/img/bluemoon.jpg" height="30" width="30">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
