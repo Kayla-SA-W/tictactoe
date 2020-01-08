@@ -358,10 +358,6 @@ const startGame = () => {
   $('#spaceSix').text(' ')
   $('#spaceSeven').text(' ')
   $('#spaceEight').text(' ')
-<<<<<<< HEAD
-  gameOver = false
-=======
-
   gameOver = false
   playerOne = true
   showBoard()
@@ -395,7 +391,6 @@ const getPastGames = (event) => {
   api.getPastGames(data)
     .then(ui.onGetPastGamesSuccess)
     .catch(ui.onGetPastGamesFailure)
->>>>>>> apiSpecs
 }
 
 const addHandlers = () => {
@@ -409,11 +404,8 @@ const addHandlers = () => {
   $('#spaceSeven').on('click', playerTurnSeven)
   $('#spaceEight').on('click', playerTurnEight)
   $('#gameStarter').on('click', startGame)
-<<<<<<< HEAD
-=======
   $('#gameStarter').on('click', createGame)
   $('#pastGames').on('click', getPastGames)
->>>>>>> apiSpecs
 }
 
 module.exports = {
