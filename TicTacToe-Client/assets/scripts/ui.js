@@ -1,17 +1,17 @@
 'use strict'
 const store = require('./store')
 
-const signUpSuccess = function(response) {
+const signUpSuccess = function (response) {
   $('#signUpMessage').text('successfully signed up!')
   $('#sign-up').trigger('reset')
 }
 
-const signUpFailure = function() {
+const signUpFailure = function () {
   $('#signUpMessage').text('sign up failure!')
   $('#sign-up').trigger('reset')
 }
 
-const signInSuccess = function(response) {
+const signInSuccess = function (response) {
   $('#signInMessage').text('successfully signed in!')
   store.user = response.user
   $('#logout').show()
@@ -23,22 +23,22 @@ const signInSuccess = function(response) {
   $('#sign-in').trigger('reset')
 }
 
-const signInFailure = function() {
+const signInFailure = function () {
   $('#signInMessage').text('Unable to Sign In!')
   $('#sign-in').trigger('reset')
 }
 
-const changePwSuccess = function(response) {
+const changePwSuccess = function (response) {
   $('#pwChangeMessage').text('successfully changed password!')
   $('#change-pw').trigger('reset')
 }
 
-const changePwFailure = function() {
+const changePwFailure = function () {
   $('#pwChangeMessage').text('could not change password!')
   $('#change-pw').trigger('reset')
 }
 
-const signOutSuccess = function(response) {
+const signOutSuccess = function (response) {
   $('#logoutMessage').text('successfully signed out!')
   $('#sign-in').trigger('reset')
   $('#change-pw').hide()
@@ -49,7 +49,7 @@ const signOutSuccess = function(response) {
   $('#createExample').hide()
 }
 
-const signOutFailure = function() {
+const signOutFailure = function () {
   $('#logoutMessage').text('could not sign out!')
 }
 
@@ -64,12 +64,11 @@ const createGameFailure = response => {
 
 const onUpdateSuccess = response => {
   store.game = response.game
-  console.log(store.game.over)
 }
 
 const onGetPastGamesSuccess = response => {
   console.log()
-  $('#messages').text('You have played ' + $(response.games).length + ' games')
+  $('#messages').text('You have completed ' + $(response.games).length + ' games')
 }
 
 module.exports = {

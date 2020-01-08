@@ -17,13 +17,11 @@ const playerTurnZero = () => {
         $('#spaceZero').text('x')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
-        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[0] = 'o'
         $('#spaceZero').text('o')
         store.currentPlayer = 'o'
-        updateGame()
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
       }
@@ -31,6 +29,7 @@ const playerTurnZero = () => {
       $('#gameMessage').text('Try Again')
     }
     checkWinner()
+    updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
   }
@@ -44,20 +43,19 @@ const playerTurnOne = () => {
         $('#spaceOne').text('x')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
-        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[1] = 'o'
         $('#spaceOne').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
-        updateGame()
         playerOne = true
       }
     } else {
       $('#gameMessage').text('Try Again')
     }
     checkWinner()
+    updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
   }
@@ -71,20 +69,19 @@ const playerTurnTwo = () => {
         $('#spaceTwo').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
-        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[2] = 'o'
         $('#spaceTwo').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
-        updateGame()
         playerOne = true
       }
     } else {
       $('#gameMessage').text('Try Again')
     }
     checkWinner()
+    updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
   }
@@ -98,20 +95,19 @@ const playerTurnThree = () => {
         $('#spaceThree').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
-        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[3] = 'o'
         $('#spaceThree').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
-        updateGame()
         playerOne = true
       }
     } else {
       $('#gameMessage').text('Try Again')
     }
     checkWinner()
+    updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
   }
@@ -125,20 +121,19 @@ const playerTurnFour = () => {
         $('#spaceFour').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
-        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[4] = 'o'
         $('#spaceFour').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
-        updateGame()
         playerOne = true
       }
     } else {
       $('#gameMessage').text('Try Again')
     }
     checkWinner()
+    updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
   }
@@ -152,20 +147,19 @@ const playerTurnFive = () => {
         $('#spaceFive').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
-        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[5] = 'o'
         $('#spaceFive').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
-        updateGame()
         playerOne = true
       }
     } else {
       $('#gameMessage').text('Try Again')
     }
     checkWinner()
+    updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
   }
@@ -179,20 +173,19 @@ const playerTurnSix = () => {
         $('#spaceSix').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
-        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[6] = 'o'
         $('#spaceSix').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
-        updateGame()
         playerOne = true
       }
     } else {
       $('#gameMessage').text('Try Again')
     }
     checkWinner()
+    updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
   }
@@ -206,20 +199,19 @@ const playerTurnSeven = () => {
         $('#spaceSeven').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
-        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[7] = 'o'
         $('#spaceSeven').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
-        updateGame()
         playerOne = true
       }
     } else {
       $('#gameMessage').text('Try Again')
     }
     checkWinner()
+    updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
   }
@@ -233,20 +225,19 @@ const playerTurnEight = () => {
         $('#spaceEight').text('x')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
-        updateGame()
         playerOne = false
       } else if (!playerOne) {
         gameboard[8] = 'o'
         $('#spaceEight').text('o')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
-        updateGame()
         playerOne = true
       }
     } else {
       $('#gameMessage').text('Try Again')
     }
     checkWinner()
+    updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
   }
@@ -255,11 +246,16 @@ const playerTurnEight = () => {
 const checkWinner = () => {
   if (playerOne === false) {
     checkWinnerX()
-  } else if (playerOne === true) {
+  } else {
     checkWinnerO()
-  }
-  // store.game.over = gameOver
-  // console.log(store.game.over)
+  } store.game.over = gameOver
+  // if (gameOver) {
+  //   store.game.over = true
+  //   console.log(store.game.over)
+  // } else if (!gameOver) {
+  //   store.game.over = false
+  //   console.log(store.game.over)
+  // }
 }
 
 const checkWinnerX = () => {
@@ -372,7 +368,7 @@ const updateGame = () => {
     .then(ui.onUpdateSuccess)
     .catch(console.error)
 }
-
+// Games that have over as true
 const getPastGames = (event) => {
   const form = event.target
   const data = getFormFields(form)
