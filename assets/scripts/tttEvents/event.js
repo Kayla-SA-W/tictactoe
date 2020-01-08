@@ -115,7 +115,7 @@ const playerTurnThree = () => {
 const playerTurnFour = () => {
   if (!gameOver) {
     if (gameboard[4] === ' ') {
-      store.game.cells.id = 0
+      store.game.cells.id = 4
       if (playerOne) {
         gameboard[4] = 'x'
         $('#spaceFour').html('<img src="./public/img/graymoon.jpeg" height="30" width="30">')
