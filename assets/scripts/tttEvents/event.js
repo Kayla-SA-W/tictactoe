@@ -16,13 +16,13 @@ const playerTurnZero = () => {
       store.game.cells.id = 0
       if (playerOne) {
         gameboard[0] = 'x'
-        $('#spaceZero').text('x')
+        $('#spaceZero').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[0] = 'o'
-        $('#spaceZero').text('o')
+        $('#spaceZero').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -42,13 +42,13 @@ const playerTurnOne = () => {
       store.game.cells.id = 1
       if (playerOne) {
         gameboard[1] = 'x'
-        $('#spaceOne').text('x')
+        $('#spaceOne').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[1] = 'o'
-        $('#spaceOne').text('o')
+        $('#spaceOne').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -68,13 +68,13 @@ const playerTurnTwo = () => {
       store.game.cells.id = 2
       if (playerOne) {
         gameboard[2] = 'x'
-        $('#spaceTwo').text('x')
+        $('#spaceTwo').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[2] = 'o'
-        $('#spaceTwo').text('o')
+        $('#spaceTwo').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -96,11 +96,11 @@ const playerTurnThree = () => {
         gameboard[3] = 'x'
         $('#spaceThree').text('x')
         store.currentPlayer = 'x'
-        $('#gameMessage').text('Player Two, your turn')
+        $('#gameMessage').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         playerOne = false
       } else if (!playerOne) {
         gameboard[3] = 'o'
-        $('#spaceThree').text('o')
+        $('#spaceThree').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -120,13 +120,13 @@ const playerTurnFour = () => {
       store.game.cells.id = 4
       if (playerOne) {
         gameboard[4] = 'x'
-        $('#spaceFour').text('x')
+        $('#spaceThree').text('x')
         store.currentPlayer = 'x'
-        $('#gameMessage').text('Player Two, your turn')
+        $('#gameMessage').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         playerOne = false
       } else if (!playerOne) {
         gameboard[4] = 'o'
-        $('#spaceFour').text('o')
+        $('#spaceThree').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -146,13 +146,13 @@ const playerTurnFive = () => {
       store.game.cells.id = 5
       if (playerOne) {
         gameboard[5] = 'x'
-        $('#spaceFive').text('x')
+        $('#spaceThree').text('x')
         store.currentPlayer = 'x'
-        $('#gameMessage').text('Player Two, your turn')
+        $('#gameMessage').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         playerOne = false
       } else if (!playerOne) {
         gameboard[5] = 'o'
-        $('#spaceFive').text('o')
+        $('#spaceThree').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -172,13 +172,13 @@ const playerTurnSix = () => {
       store.game.cells.id = 6
       if (playerOne) {
         gameboard[6] = 'x'
-        $('#spaceSix').text('x')
+        $('#spaceSix').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[6] = 'o'
-        $('#spaceSix').text('o')
+        $('#spaceSix').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -198,13 +198,13 @@ const playerTurnSeven = () => {
       store.game.cells.id = 7
       if (playerOne) {
         gameboard[7] = 'x'
-        $('#spaceSeven').text('x')
+        $('#spaceSeven').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[7] = 'o'
-        $('#spaceSeven').text('o')
+        $('#spaceSeven').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -224,13 +224,13 @@ const playerTurnEight = () => {
       store.game.cells.id = 8
       if (playerOne) {
         gameboard[8] = 'x'
-        $('#spaceEight').text('x')
+        $('#spaceEight').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[8] = 'o'
-        $('#spaceEight').text('o')
+        $('#spaceEight').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
