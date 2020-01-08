@@ -9,6 +9,8 @@ let playerOne = true
 let gameOver = false
 const gameboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 const playerTurnZero = () => {
+  // const form = event.target
+  // const data = getFormFields(form)
   if (!gameOver) {
     if (gameboard[0] === ' ') {
       store.game.cells.id = 0
