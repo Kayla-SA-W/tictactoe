@@ -254,7 +254,8 @@ const checkWinner = () => {
     checkWinnerX()
   } else {
     checkWinnerO()
-  } store.game.over = gameOver
+  }
+  store.game.over = gameOver
   // if (gameOver) {
   //   store.game.over = true
   //   console.log(store.game.over)
@@ -384,8 +385,174 @@ const getPastGames = (event) => {
     .catch(ui.onGetPastGamesFailure)
 }
 
+const onClick = event => {
+  const currentbox = event.target.id
+  takeTurn(currentbox)
+}
+const takeTurn = (currentbox) => {
+  // if the game isnt over
+  if (!gameOver) {
+    // and if the currentbox is space zero and the game board at space zero is blank
+    if (currentbox === 'spaceZero' && gameboard[0] === ' ') {
+      // set the cell id to zero
+      store.game.cells.id = 0
+      // if player one is true aka if player one is x
+      if (playerOne) {
+        // mark gameboard at 0 to x
+        gameboard[0] = 'x'
+        // give space zero an x in the html
+        $('#spaceZero').text('x')
+        // and tell the user that its player twos turn
+        $('#gameMessage').text('Player Two, your turn')
+        // set the current player to x for the api
+        store.currentPlayer = 'x'
+        // change players
+        playerOne = false
+        // if its not player ones turn
+      } else if (!playerOne) {
+        // mark gameboard at 0 to o
+        gameboard[0] = 'o'
+        // give the space an o in the html
+        $('#spaceZero').text('o')
+        // store the current player to o for the api
+        store.currentPlayer = 'o'
+        // and tell the user that its player ones turn
+        $('#gameMessage').text('Player One, your turn')
+        // change players
+        playerOne = true
+      }
+    } else if (currentbox === 'spaceOne' && gameboard[1] === ' ') {
+      store.game.cells.id = 1
+      if (playerOne) {
+        gameboard[1] = 'x'
+        $('#spaceZero').text('x')
+        $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
+        playerOne = false
+      } else if (!playerOne) {
+        gameboard[1] = 'o'
+        $('#spaceZero').text('o')
+        store.currentPlayer = 'o'
+        $('#gameMessage').text('Player One, your turn')
+        playerOne = true
+      }
+    } else if (currentbox === 'spaceTwo' && gameboard[2] === ' ') {
+      store.game.cells.id = 2
+      if (playerOne) {
+        gameboard[2] = 'x'
+        $('#spaceZero').text('x')
+        $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
+        playerOne = false
+      } else if (!playerOne) {
+        gameboard[2] = 'o'
+        $('#spaceZero').text('o')
+        store.currentPlayer = 'o'
+        $('#gameMessage').text('Player One, your turn')
+        playerOne = true
+      }
+    } else if (currentbox === 'spaceThree' && gameboard[3] === ' ') {
+      store.game.cells.id = 3
+      if (playerOne) {
+        gameboard[3] = 'x'
+        $('#spaceZero').text('x')
+        $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
+        playerOne = false
+      } else if (!playerOne) {
+        gameboard[3] = 'o'
+        $('#spaceZero').text('o')
+        store.currentPlayer = 'o'
+        $('#gameMessage').text('Player One, your turn')
+        playerOne = true
+      }
+    } else if (currentbox === 'spaceFour' && gameboard[4] === ' ') {
+      store.game.cells.id = 4
+      if (playerOne) {
+        gameboard[4] = 'x'
+        $('#spaceZero').text('x')
+        $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
+        playerOne = false
+      } else if (!playerOne) {
+        gameboard[4] = 'o'
+        $('#spaceZero').text('o')
+        store.currentPlayer = 'o'
+        $('#gameMessage').text('Player One, your turn')
+        playerOne = true
+      }
+    } else if (currentbox === 'spaceFive' && gameboard[5] === ' ') {
+      store.game.cells.id = 5
+      if (playerOne) {
+        gameboard[5] = 'x'
+        $('#spaceZero').text('x')
+        $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
+        playerOne = false
+      } else if (!playerOne) {
+        gameboard[5] = 'o'
+        $('#spaceZero').text('o')
+        store.currentPlayer = 'o'
+        $('#gameMessage').text('Player One, your turn')
+        playerOne = true
+      }
+    } else if (currentbox === 'spaceSix' && gameboard[6] === ' ') {
+      store.game.cells.id = 6
+      if (playerOne) {
+        gameboard[6] = 'x'
+        $('#spaceZero').text('x')
+        $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
+        playerOne = false
+      } else if (!playerOne) {
+        gameboard[6] = 'o'
+        $('#spaceZero').text('o')
+        store.currentPlayer = 'o'
+        $('#gameMessage').text('Player One, your turn')
+        playerOne = true
+      }
+    } else if (currentbox === 'spaceSeven' && gameboard[7] === ' ') {
+      store.game.cells.id = 0
+      if (playerOne) {
+        gameboard[7] = 'x'
+        $('#spaceZero').text('x')
+        $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
+        playerOne = false
+      } else if (!playerOne) {
+        gameboard[7] = 'o'
+        $('#spaceZero').text('o')
+        store.currentPlayer = 'o'
+        $('#gameMessage').text('Player One, your turn')
+        playerOne = true
+      }
+    } else if (currentbox === 'spaceEight' && gameboard[8] === ' ') {
+      store.game.cells.id = 8
+      if (playerOne) {
+        gameboard[8] = 'x'
+        $('#spaceZero').text('x')
+        $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
+        playerOne = false
+      } else if (!playerOne) {
+        gameboard[8] = 'o'
+        $('#spaceZero').text('o')
+        store.currentPlayer = 'o'
+        $('#gameMessage').text('Player One, your turn')
+        playerOne = true
+      }
+    } else {
+      $('#gameMessage').text('Try Again')
+    }
+    checkWinner()
+    updateGame()
+  } else {
+    $('#gameMessage').text('Please start a new game')
+  }
+}
+
 const addHandlers = () => {
-  $('#spaceZero').on('click', playerTurnZero)
+  $('.ticbox').on('click', onClick)
   $('#spaceOne').on('click', playerTurnOne)
   $('#spaceTwo').on('click', playerTurnTwo)
   $('#spaceThree').on('click', playerTurnThree)
