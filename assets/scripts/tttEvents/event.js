@@ -9,8 +9,6 @@ let playerOne = true
 let gameOver = false
 const gameboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 const playerTurnZero = () => {
-  // const form = event.target
-  // const data = getFormFields(form)
   if (!gameOver) {
     if (gameboard[0] === ' ') {
       store.game.cells.id = 0
@@ -91,16 +89,16 @@ const playerTurnTwo = () => {
 const playerTurnThree = () => {
   if (!gameOver) {
     if (gameboard[3] === ' ') {
-      store.game.cells.id = 3
+      store.game.cells.id = 0
       if (playerOne) {
         gameboard[3] = 'x'
-        $('#spaceThree').text('x')
+        $('#spaceZero').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
-        $('#gameMessage').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         playerOne = false
       } else if (!playerOne) {
         gameboard[3] = 'o'
-        $('#spaceThree').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceZero').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -117,16 +115,16 @@ const playerTurnThree = () => {
 const playerTurnFour = () => {
   if (!gameOver) {
     if (gameboard[4] === ' ') {
-      store.game.cells.id = 4
+      store.game.cells.id = 0
       if (playerOne) {
         gameboard[4] = 'x'
-        $('#spaceThree').text('x')
+        $('#spaceZero').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
-        $('#gameMessage').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         playerOne = false
       } else if (!playerOne) {
         gameboard[4] = 'o'
-        $('#spaceThree').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceZero').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -143,16 +141,16 @@ const playerTurnFour = () => {
 const playerTurnFive = () => {
   if (!gameOver) {
     if (gameboard[5] === ' ') {
-      store.game.cells.id = 5
+      store.game.cells.id = 0
       if (playerOne) {
         gameboard[5] = 'x'
-        $('#spaceThree').text('x')
+        $('#spaceZero').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
+        $('#gameMessage').text('Player Two, your turn')
         store.currentPlayer = 'x'
-        $('#gameMessage').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         playerOne = false
       } else if (!playerOne) {
         gameboard[5] = 'o'
-        $('#spaceThree').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceZero').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
@@ -169,16 +167,16 @@ const playerTurnFive = () => {
 const playerTurnSix = () => {
   if (!gameOver) {
     if (gameboard[6] === ' ') {
-      store.game.cells.id = 6
+      store.game.cells.id = 0
       if (playerOne) {
         gameboard[6] = 'x'
-        $('#spaceSix').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
-        store.currentPlayer = 'x'
+        $('#spaceZero').html('<img src="./public/img/graymoon.jpeg" height="50" width="50">')
         $('#gameMessage').text('Player Two, your turn')
+        store.currentPlayer = 'x'
         playerOne = false
       } else if (!playerOne) {
         gameboard[6] = 'o'
-        $('#spaceSix').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
+        $('#spaceZero').html('<img src="./public/img/bluemoon.jpg" height="50" width="50">')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
