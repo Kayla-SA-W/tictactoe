@@ -1,10 +1,10 @@
 # Application Title: Kayla W Tic Tac Toe
 
-Two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. - ![Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
+Two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. - [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 ## Important Links --->>
-![Deployed Site] (https://kayla-sa-w.github.io/tictactoe/)
-![My Commit History] (https://github.com/Kayla-SA-W/TicTacToe-Client/commits/master)
+[Deployed Site] (https://kayla-sa-w.github.io/tictactoe/)
+[My Commit History] (https://github.com/Kayla-SA-W/TicTacToe-Client/commits/master)
 
 ## Planning Story --->>>
 
@@ -34,6 +34,6 @@ I would still like to style my page
 
 
 ## Images --->>>
-## Wireframes:
-![First Wireframe Image] (/public/IMG_0422)
-![Second Wirefram Image] (/public/IMG_0425)
+### Wireframes:
+[First Wireframe Image] (/public/IMG_0422)
+[Second Wirefram Image] (/public/IMG_0425)
