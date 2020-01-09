@@ -12,6 +12,12 @@ body {
   background: #073898;
 }
 
+.winningCombo {
+  animation-name: flash;
+  animation-duration: .25s;
+  animation-iteration-count: 10;
+}
+
 .box {
   align-items: center;
   // background-color: $white;
@@ -42,4 +48,13 @@ header {
   background: rgb(3,0,57);
 background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
 color: white;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

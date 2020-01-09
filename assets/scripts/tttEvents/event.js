@@ -21,6 +21,7 @@ const checkWinner = () => {
 const checkWinnerX = () => {
   if (gameboard[0] === 'x' && gameboard[1] === 'x' && gameboard[2] === 'x') {
     $('#gameMessage').text('Player One Wins!')
+    $('#spaceZero > img, #spaceOne > img, #spaceTwo > img').addClass('winningCombo')
     gameOver = true
   } else if (gameboard[0] === 'x' && gameboard[3] === 'x' && gameboard[6] === 'x') {
     $('#gameMessage').text('Player One Wins!')
@@ -57,6 +58,7 @@ const checkWinnerX = () => {
 const checkWinnerO = () => {
   if (gameboard[0] === 'o' && gameboard[1] === 'o' && gameboard[2] === 'o') {
     $('#gameMessage').text('Player Two Wins!')
+    $('#spaceZero, #spaceOne, #spaceTwo').addClass('winningCombo')
     gameOver = true
   } else if (gameboard[0] === 'o' && gameboard[3] === 'o' && gameboard[6] === 'o') {
     $('#gameMessage').text('Player Two Wins!')
