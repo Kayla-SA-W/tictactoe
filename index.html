@@ -16,7 +16,7 @@
 <body>
   <header >
     <h1 class="text-center">Tic Tac Toe</h1>
-  </header>
+  <div class='form-container'>
     <p id='signUpMessage'></p>
     <form class="sign-up" id='sign-up'>
       <fieldset>
@@ -52,6 +52,7 @@
         <input type='submit' value='Logout' />
       </fieldset>
     </form>
+  </div>
   <div class="container" id="gameBoard">
     <h2 id='gameMessage'> Start Game </h2>
     <div class="row">
@@ -66,12 +67,23 @@
       <div class="col-4 box ticbox rounded border-bottom-0 border-right-0" id="spaceEight"> </div>
     </div>
   </div>
-  <button type="button" class="btn btn-outline-dark text-center" id="gameStarter"> Start New Game </button>
-  <button type="button" class="btn btn-outline-dark text-center" id="pastGames"> Show Past Games </button>
+  </header>
+  <div class="button-area">
+  <button type="button" class="btn btn btn-light text-center" id="gameStarter"> Start New Game </button>
+  <button type="button" class="btn btn btn-light text-center" id="pastGames"> Show Past Games </button>
   <p id='quick-test'> </p>
 
   <section id="content"> </section>
   <div id="messages"> </div>
+  </div>
+
+  <footer>
+    <p> Kayla Williams General Assembly Project 1 </p>
+    <div id="links">
+      <a href="https://www.linkedin.com/in/kayla-williams-2262a296/"> <img border="0" alt="LinkedIn" src="./public/img/LinkedIn_logo.png" width="50" height="50"> </a>
+      <a href="mailto:kaylawilli94@gmail.com" target="_top"><img border="0" alt="LinkedIn" src="./public/img/gmail_logo.png" width="50" height="50"> </a>
+    </div>
+  </footer>
 
 </body>
 

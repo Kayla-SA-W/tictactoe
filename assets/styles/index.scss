@@ -12,10 +12,10 @@ body {
   background: #073898;
 }
 
-.winningCombo {
-  animation-name: flash;
+.winning-combo {
   animation-duration: .25s;
   animation-iteration-count: 10;
+  animation-name: flash;
 }
 
 .box {
@@ -33,7 +33,30 @@ body {
 }
 
 .form-container {
-  background-color: $body-color-tint;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
+  color: $white;
+  margin-top: 0;
+}
+
+footer {
+  align-items: flex-end;
+  background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
+  bottom: 0px;
+  color: $white;
+  display: flex;
+  font-size: 24px;
+  height: 50px;
+  justify-content: space-between;
+  left: 0px;
+  margin-bottom: 0px;
+  position: fixed;
+  right: 0px;
+  & div {
+    justify-content: space-around;
+  }
 }
 
 .sign-up {
@@ -45,9 +68,8 @@ body {
 }
 
 header {
-  background: rgb(3,0,57);
-background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
-color: white;
+  background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
+  color: white;
 }
 
 @keyframes flash {

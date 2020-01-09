@@ -18,10 +18,10 @@ const checkWinner = () => {
   store.game.over = gameOver
 }
 
-const checkWinnerX = () => {
+const checkWinnerX = (jsBoardSpot) => {
   if (gameboard[0] === 'x' && gameboard[1] === 'x' && gameboard[2] === 'x') {
     $('#gameMessage').text('Player One Wins!')
-    $('#spaceZero > img, #spaceOne > img, #spaceTwo > img').addClass('winningCombo')
+    $('#spaceZero > img, #spaceOne > img, #spaceTwo > img').addClass('winning-combo')
     gameOver = true
   } else if (gameboard[0] === 'x' && gameboard[3] === 'x' && gameboard[6] === 'x') {
     $('#gameMessage').text('Player One Wins!')
@@ -56,8 +56,9 @@ const checkWinnerX = () => {
   }
 }
 const checkWinnerO = () => {
+  const message = playerOne ? 'Player One Wins!' : 'Player Two Wins!'
   if (gameboard[0] === 'o' && gameboard[1] === 'o' && gameboard[2] === 'o') {
-    $('#gameMessage').text('Player Two Wins!')
+    $('#gameMessage').text(message)
     $('#spaceZero, #spaceOne, #spaceTwo').addClass('winningCombo')
     gameOver = true
   } else if (gameboard[0] === 'o' && gameboard[3] === 'o' && gameboard[6] === 'o') {
@@ -132,7 +133,7 @@ const updateGame = () => {
     .catch(console.error)
 }
 // Games that have over as true
-const getPastGames = (event) => {
+const getPastGames = event => {
   const form = event.target
   const data = getFormFields(form)
   api.getPastGames(data)
@@ -166,15 +167,12 @@ const findSpot = event => {
 }
 
 const takeTurn = (jsBoardSpot, currentSpot) => {
-  console.log(jsBoardSpot)
-  console.log(currentSpot)
   currentSpot = '#' + currentSpot
   if (!gameOver) {
     if (gameboard[jsBoardSpot] === ' ') {
       store.game.cells.id = jsBoardSpot
       if (playerOne) {
         gameboard[jsBoardSpot] = 'x'
-        console.log(gameboard)
         $(currentSpot).html('<img src="./public/img/graymoon-bgblue.jpg" height="50" width="50">')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
@@ -190,7 +188,7 @@ const takeTurn = (jsBoardSpot, currentSpot) => {
     } else {
       $('#gameMessage').text('Try Again')
     }
-    checkWinner()
+    checkWinner(jsBoardSpot)
     updateGame()
   } else {
     $('#gameMessage').text('Please start a new game')
