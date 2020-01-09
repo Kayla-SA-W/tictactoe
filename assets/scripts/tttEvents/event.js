@@ -10,39 +10,38 @@ let gameOver = false
 const gameboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
 const checkWinner = () => {
-  if (playerOne === false) {
-    checkWinnerX()
-  } else {
-    checkWinnerO()
-  }
-  store.game.over = gameOver
-}
-
-const checkWinnerX = (jsBoardSpot) => {
-  if (gameboard[0] === 'x' && gameboard[1] === 'x' && gameboard[2] === 'x') {
-    $('#gameMessage').text('Player One Wins!')
+  const message = playerOne ? 'Player One Wins!' : 'Player Two Wins!'
+  if (gameboard[0] !== ' ' && gameboard[0] === gameboard[1] && gameboard[0] === gameboard[2]) {
+    $('#gameMessage').text(message)
     $('#spaceZero > img, #spaceOne > img, #spaceTwo > img').addClass('winning-combo')
     gameOver = true
-  } else if (gameboard[0] === 'x' && gameboard[3] === 'x' && gameboard[6] === 'x') {
-    $('#gameMessage').text('Player One Wins!')
+  } else if (gameboard[0] !== ' ' && gameboard[0] === gameboard[3] && gameboard[0] === gameboard[6]) {
+    $('#gameMessage').text(message)
+    $('#spaceZero > img, #spaceThree > img, #spaceSix > img').addClass('winning-combo')
     gameOver = true
-  } else if (gameboard[0] === 'x' && gameboard[4] === 'x' && gameboard[8] === 'x') {
-    $('#gameMessage').text('Player One Wins!')
+  } else if (gameboard[0] !== ' ' && gameboard[4] === gameboard[0] && gameboard[8] === gameboard[0]) {
+    $('#gameMessage').text(message)
+    $('#spaceZero > img, #spaceFour > img, #spaceEight > img').addClass('winning-combo')
     gameOver = true
-  } else if (gameboard[1] === 'x' && gameboard[4] === 'x' && gameboard[7] === 'x') {
-    $('#gameMessage').text('Player One Wins!')
+  } else if (gameboard[1] !== ' ' && gameboard[4] === gameboard[1] && gameboard[7] === gameboard[1]) {
+    $('#gameMessage').text(message)
+    $('#spaceOne > img, #spaceFour > img, #spaceSeven > img').addClass('winning-combo')
     gameOver = true
-  } else if (gameboard[2] === 'x' && gameboard[4] === 'x' && gameboard[6] === 'x') {
-    $('#gameMessage').text('Player One Wins!')
+  } else if (gameboard[2] !== ' ' && gameboard[4] === gameboard[2] && gameboard[6] === gameboard[2]) {
+    $('#gameMessage').text(message)
+    $('#spaceTwo > img, #spaceFour > img, #spaceSix > img').addClass('winning-combo')
     gameOver = true
-  } else if (gameboard[3] === 'x' && gameboard[4] === 'x' && gameboard[5] === 'x') {
-    $('#gameMessage').text('Player One Wins!')
+  } else if (gameboard[3] !== ' ' && gameboard[4] === gameboard[3] && gameboard[5] === gameboard[3]) {
+    $('#gameMessage').text(message)
+    $('#spaceThree > img, #spaceFour > img, #spaceFive > img').addClass('winning-combo')
     gameOver = true
-  } else if (gameboard[6] === 'x' && gameboard[7] === 'x' && gameboard[8] === 'x') {
-    $('#gameMessage').text('Player One Wins!')
+  } else if (gameboard[6] !== ' ' && gameboard[7] === gameboard[6] && gameboard[8] === gameboard[6]) {
+    $('#gameMessage').text(message)
+    $('#spaceSix > img, #spaceSeven > img, #spaceEight > img').addClass('winning-combo')
     gameOver = true
-  } else if (gameboard[2] === 'x' && gameboard[5] === 'x' && gameboard[8] === 'x') {
-    $('#gameMessage').text('Player One Wins!')
+  } else if (gameboard[2] !== ' ' && gameboard[5] === gameboard[2] && gameboard[8] === gameboard[2]) {
+    $('#gameMessage').text(message)
+    $('#spaceTwo > img, #spaceFive > img, #spaceEight > img').addClass('winning-combo')
     gameOver = true
   } else if (!gameOver) {
     if (gameboard.includes(' ')) {
@@ -54,43 +53,44 @@ const checkWinnerX = (jsBoardSpot) => {
   } else {
     gameOver = false
   }
+  store.game.over = gameOver
 }
-const checkWinnerO = () => {
-  const message = playerOne ? 'Player One Wins!' : 'Player Two Wins!'
-  if (gameboard[0] === 'o' && gameboard[1] === 'o' && gameboard[2] === 'o') {
-    $('#gameMessage').text(message)
-    $('#spaceZero, #spaceOne, #spaceTwo').addClass('winningCombo')
-    gameOver = true
-  } else if (gameboard[0] === 'o' && gameboard[3] === 'o' && gameboard[6] === 'o') {
-    $('#gameMessage').text('Player Two Wins!')
-    gameOver = true
-  } else if (gameboard[0] === 'o' && gameboard[4] === 'o' && gameboard[8] === 'o') {
-    $('#gameMessage').text('Player Two Wins!')
-    gameOver = true
-  } else if (gameboard[1] === 'o' && gameboard[4] === 'o' && gameboard[7] === 'o') {
-    $('#gameMessage').text('Player Two Wins!')
-    gameOver = true
-  } else if (gameboard[2] === 'o' && gameboard[4] === 'o' && gameboard[6] === '0') {
-    $('#gameMessage').text('Player Two Wins!')
-    gameOver = true
-  } else if (gameboard[3] === 'o' && gameboard[4] === 'o' && gameboard[5] === 'o') {
-    $('#gameMessage').text('Player Two Wins!')
-    gameOver = true
-  } else if (gameboard[6] === 'o' && gameboard[7] === 'o' && gameboard[8] === 'o') {
-    $('#gameMessage').text('Player Two Wins!')
-    gameOver = true
-  } else if (gameboard[2] === 'o' && gameboard[5] === 'o' && gameboard[8] === 'o') {
-    $('#gameMessage').text('Player Two Wins!')
-    gameOver = true
-  } else if (!gameOver) {
-    if (!gameboard.includes(' ')) {
-      gameOver = true
-      $('#gameMessage').text('It is a Tie!')
-    } else {
-      gameOver = false
-    }
-  }
-}
+// const checkWinnerO = () => {
+//   const message = playerOne ? 'Player One Wins!' : 'Player Two Wins!'
+//   if (gameboard[0] === 'o' && gameboard[1] === 'o' && gameboard[2] === 'o') {
+//     $('#gameMessage').text(message)
+//     $('#spaceZero, #spaceOne, #spaceTwo').addClass('winningCombo')
+//     gameOver = true
+//   } else if (gameboard[0] === 'o' && gameboard[3] === 'o' && gameboard[6] === 'o') {
+//     $('#gameMessage').text('Player Two Wins!')
+//     gameOver = true
+//   } else if (gameboard[0] === 'o' && gameboard[4] === 'o' && gameboard[8] === 'o') {
+//     $('#gameMessage').text('Player Two Wins!')
+//     gameOver = true
+//   } else if (gameboard[1] === 'o' && gameboard[4] === 'o' && gameboard[7] === 'o') {
+//     $('#gameMessage').text('Player Two Wins!')
+//     gameOver = true
+//   } else if (gameboard[2] === 'o' && gameboard[4] === 'o' && gameboard[6] === '0') {
+//     $('#gameMessage').text('Player Two Wins!')
+//     gameOver = true
+//   } else if (gameboard[3] === 'o' && gameboard[4] === 'o' && gameboard[5] === 'o') {
+//     $('#gameMessage').text('Player Two Wins!')
+//     gameOver = true
+//   } else if (gameboard[6] === 'o' && gameboard[7] === 'o' && gameboard[8] === 'o') {
+//     $('#gameMessage').text('Player Two Wins!')
+//     gameOver = true
+//   } else if (gameboard[2] === 'o' && gameboard[5] === 'o' && gameboard[8] === 'o') {
+//     $('#gameMessage').text('Player Two Wins!')
+//     gameOver = true
+//   } else if (!gameOver) {
+//     if (!gameboard.includes(' ')) {
+//       gameOver = true
+//       $('#gameMessage').text('It is a Tie!')
+//     } else {
+//       gameOver = false
+//     }
+//   }
+// }
 
 const startGame = () => {
   for (let i = 0; i < gameboard.length; i++) {
