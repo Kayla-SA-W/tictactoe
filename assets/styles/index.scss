@@ -1,6 +1,6 @@
-@import '~bootstrap/scss/bootstrap';
-// @import 'variables';
-
+$enable-gradients: true;
+$enable-shadows: true;
+@import '~bootstrap/scss/bootstrap'; // @import 'variables';
 $alt-color: $cyan;
 $body-color: #b7b7b9;
 $body-color-tint: scale-color($body-color, $lightness: -4%);
@@ -9,12 +9,12 @@ $body-bg-color-tint: scale-color($body-bg-color, $lightness: -4%);
 $font-color: $light;
 
 body {
-  background-color: $body-color;
+  background: #073898;
 }
 
 .box {
   align-items: center;
-  background-color: $white;
+  // background-color: $white;
   border: 1px solid $black;
   color: $font-color;
   display: flex;
@@ -30,6 +30,16 @@ body {
   background-color: $body-color-tint;
 }
 
-form {
+.sign-up {
   align-items: center;
- }
+}
+
+.sign-in {
+  align-items: center;
+}
+
+header {
+  background: rgb(3,0,57);
+background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
+color: white;
+}
