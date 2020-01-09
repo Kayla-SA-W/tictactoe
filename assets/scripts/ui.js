@@ -71,8 +71,11 @@ const onUpdateSuccess = response => {
   store.game = response.game
 }
 
+const onUpdateFailure = response => {
+  $('#quick-test').text('Game not updated in API!')
+}
+
 const onGetPastGamesSuccess = response => {
-  console.log()
   $('#messages').text('You have completed ' + $(response.games).length + ' games')
 }
 
@@ -88,5 +91,6 @@ module.exports = {
   createGameSuccess,
   createGameFailure,
   onUpdateSuccess,
+  onUpdateFailure,
   onGetPastGamesSuccess
 }

@@ -12,6 +12,19 @@ body {
   background: #073898;
 }
 
+// .gameboard {
+//   background: #073898;
+// }
+
+.scoreboard {
+  background: #0a0a96;
+  color: white;
+  font-weight: bold;
+  margin: 20px auto;
+
+
+}
+
 .winning-combo {
   animation-duration: .25s;
   animation-iteration-count: 10;
