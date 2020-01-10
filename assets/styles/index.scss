@@ -73,6 +73,16 @@ footer {
   }
 }
 
+.button-area {
+  align-items: center ;
+  display: flex;
+  // justify-content: center;
+  justify-content: center;
+  & .game-play{
+    justify-content: space-around;
+  }
+}
+
 .sign-up {
   align-items: center;
 }

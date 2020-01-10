@@ -10,43 +10,6 @@ let gameOver = false
 let playerScore = 0
 const gameboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
-// const checkWinnerO = () => {
-//   const message = playerOne ? 'Player One Wins!' : 'Player Two Wins!'
-//   if (gameboard[0] === 'o' && gameboard[1] === 'o' && gameboard[2] === 'o') {
-//     $('#gameMessage').text(message)
-//     $('#spaceZero, #spaceOne, #spaceTwo').addClass('winningCombo')
-//     gameOver = true
-//   } else if (gameboard[0] === 'o' && gameboard[3] === 'o' && gameboard[6] === 'o') {
-//     $('#gameMessage').text('Player Two Wins!')
-//     gameOver = true
-//   } else if (gameboard[0] === 'o' && gameboard[4] === 'o' && gameboard[8] === 'o') {
-//     $('#gameMessage').text('Player Two Wins!')
-//     gameOver = true
-//   } else if (gameboard[1] === 'o' && gameboard[4] === 'o' && gameboard[7] === 'o') {
-//     $('#gameMessage').text('Player Two Wins!')
-//     gameOver = true
-//   } else if (gameboard[2] === 'o' && gameboard[4] === 'o' && gameboard[6] === '0') {
-//     $('#gameMessage').text('Player Two Wins!')
-//     gameOver = true
-//   } else if (gameboard[3] === 'o' && gameboard[4] === 'o' && gameboard[5] === 'o') {
-//     $('#gameMessage').text('Player Two Wins!')
-//     gameOver = true
-//   } else if (gameboard[6] === 'o' && gameboard[7] === 'o' && gameboard[8] === 'o') {
-//     $('#gameMessage').text('Player Two Wins!')
-//     gameOver = true
-//   } else if (gameboard[2] === 'o' && gameboard[5] === 'o' && gameboard[8] === 'o') {
-//     $('#gameMessage').text('Player Two Wins!')
-//     gameOver = true
-//   } else if (!gameOver) {
-//     if (!gameboard.includes(' ')) {
-//       gameOver = true
-//       $('#gameMessage').text('It is a Tie!')
-//     } else {
-//       gameOver = false
-//     }
-//   }
-// }
-
 const startGame = () => {
   for (let i = 0; i < gameboard.length; i++) {
     gameboard[i] = ' '
