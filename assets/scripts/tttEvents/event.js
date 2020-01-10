@@ -171,11 +171,17 @@ const trackScore = () => {
   // console.log(playerScore)
 }
 
+// const rotateBoard = (event) => {
+//   event.preventDefault()
+//   $('rotate-me').addClass('rotate-me')
+// }
+
 const addHandlers = () => {
   $('.ticbox').on('click', findSpot)
   $('#gameStarter').on('click', startGame)
   $('#gameStarter').on('click', createGame)
   $('#pastGames').on('click', getPastGames)
+  // $('rotate-me').on('click', rotateBoard)
 }
 
 module.exports = {
