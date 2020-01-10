@@ -36,6 +36,6 @@ I would still like to style my page
 
 ## Images --->>>
 ### Wireframes:
-![wireframe img 1](https://imgur.com/owxz4OG)
+[wireframe img 1](https://imgur.com/owxz4OG)
 
-![wireframe](https://imgur.com/mi6k48T)
+[wireframe](https://imgur.com/mi6k48T)
