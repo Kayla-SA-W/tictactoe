@@ -2,33 +2,15 @@ $enable-gradients: true;
 $enable-shadows: true;
 @import '~bootstrap/scss/bootstrap'; // @import 'variables';
 $alt-color: $cyan;
-$body-color: #b7b7b9;
+$body-color: #073898;
 $body-color-tint: scale-color($body-color, $lightness: -4%);
+$scoreboard-bg: #0a0a96;
 $body-bg-color: #3d93f3;
 $body-bg-color-tint: scale-color($body-bg-color, $lightness: -4%);
 $font-color: $light;
 
 body {
-  background: #073898;
-}
-
-// .gameboard {
-//   background: #073898;
-// }
-
-.scoreboard {
-  background: #0a0a96;
-  color: white;
-  font-weight: bold;
-  margin: 20px auto;
-
-
-}
-
-.winning-combo {
-  animation-duration: .25s;
-  animation-iteration-count: 10;
-  animation-name: flash;
+  background: $body-color;
 }
 
 .box {
@@ -41,24 +23,30 @@ body {
   justify-content: center;
 }
 
-.alt-color {
-  background-color: $alt-color;
+.button-area {
+  align-items: center ;
+  display: flex;
+  // justify-content: center;
+  justify-content: center;
+
+  & .game-play {
+    justify-content: space-around;
+  }
 }
 
-
 .form-container {
+  background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
+  color: $white;
   display: flex;
   justify-content: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
-  color: $white;
   margin-top: 0;
 }
 
 footer {
   align-items: flex-end;
   background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
-  bottom: 0px;
+  bottom: 0 px;
   color: $white;
   display: flex;
   font-size: 24px;
@@ -68,24 +56,31 @@ footer {
   margin-bottom: 0px;
   position: fixed;
   right: 0px;
+
   & div {
     justify-content: space-around;
   }
 }
 
-.button-area {
-  align-items: center ;
-  display: flex;
-  // justify-content: center;
-  justify-content: center;
-  & .game-play{
-    justify-content: space-around;
-  }
+header {
+  background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
+  color: $white;
+}
+
+h2 {
+  color: $white;
 }
 
 // .rotate-me {
 //   transform: rotate3d(1, 1, 1, 45deg);
 // }
+
+.scoreboard {
+  background: $scoreboard-bg;
+  color: $white;
+  font-weight: bold;
+  margin: 20px auto;
+}
 
 .sign-up {
   align-items: center;
@@ -95,14 +90,12 @@ footer {
   align-items: center;
 }
 
-header {
-  background: linear-gradient(90deg, rgba(3,0,57,1) 14%, rgba(9,9,121,1) 56%, rgba(0,171,205,1) 90%);
-  color: white;
+.winning-combo {
+  animation-duration: .25s;
+  animation-iteration-count: 10;
+  animation-name: flash;
 }
 
-h2 {
-  color: white;
-}
 
 @keyframes flash {
   0% {
@@ -113,6 +106,4 @@ h2 {
   }
 }
 
-@media (min-width: 768px) {
-
-}
+// @media (min-width: 768px) {}

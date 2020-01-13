@@ -74,13 +74,13 @@ const takeTurn = (jsBoardSpot, currentSpot) => {
       store.game.cells.id = jsBoardSpot
       if (playerOne) {
         gameboard[jsBoardSpot] = 'x'
-        $(currentSpot).html('<img src="./public/img/graymoon-bgblue.jpg" height="50" width="50">')
+        $(currentSpot).text('🐙')
         store.currentPlayer = 'x'
         $('#gameMessage').text('Player Two, your turn')
         playerOne = false
       } else if (!playerOne) {
         gameboard[jsBoardSpot] = 'o'
-        $(currentSpot).html('<img src="./public/img/pinkmoon-bgblue.jpg" height="50" width="50">')
+        $(currentSpot).text('🦄')
         store.currentPlayer = 'o'
         $('#gameMessage').text('Player One, your turn')
         playerOne = true
