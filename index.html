@@ -16,8 +16,13 @@
 <body>
   <header>
     <h1 class="text-center">Tic Tac Toe</h1>
+    <div id= "messageContainer">
+      <p id="pwChangeMessage"></p>
+      <p id="logoutMessage"></p>
+      <p id="signInMessage"></p>
+      <p id="signUpMessage"></p>
+    </div>
     <div class='form-container'>
-      <p id='signUpMessage'></p>
       <form class="sign-up" id='sign-up'>
         <fieldset>
           <legend> Sign Up! </legend>
@@ -27,7 +32,6 @@
           <input type='submit' value='Sign Up!' />
         </fieldset>
       </form>
-      <p id='signInMessage'></p>
       <form class="sign-in" id='sign-in'>
         <fieldset>
           <legend> Sign In! </legend>
@@ -36,7 +40,6 @@
           <input type='submit' value='Sign In!' />
         </fieldset>
       </form>
-      <p id='pwChangeMessage'></p>
       <form id='change-pw'>
         <fieldset>
           <legend>Change Password</legend>
@@ -45,7 +48,7 @@
           <input type='submit' value='Change Password' />
         </fieldset>
       </form>
-      <p id='logoutMessage'></p>
+
       <form id='logout'>
         <fieldset>
           <legend>Sign Out</legend>
@@ -83,7 +86,7 @@
       <!-- <button type="button" class="btn btn btn-light text-center" id="rotate-me"> Rotate Board </button> -->
     </div>
     <br>
-    <p id='quick-test'> </p>
+    <!-- <p id='quick-test'> </p> -->
 
     <section id="content"> </section>
     <div id="messages"> </div>
