@@ -20,6 +20,7 @@ const signInSuccess = function (response) {
   $('#sign-up').hide()
   $('#gameStarter').show()
   $('#pastGames').show()
+  $('.scoreboard').show()
   $('#logoutMessage').text('')
   $('#sign-in').trigger('reset')
   $('#signUpMessage').text('')
@@ -50,6 +51,7 @@ const signOutSuccess = function (response) {
   $('#sign-up').show()
   $('#gameStarter').hide()
   $('#pastGames').hide()
+  $('.scoreboard').hide()
   $('#signInMessage').text('')
   $('pwChangeMessage').text('')
 }

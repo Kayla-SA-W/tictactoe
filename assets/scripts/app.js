@@ -13,6 +13,7 @@ $(() => {
   $('#pastGames').hide()
   $('#logout').hide()
   $('#gameBoard').hide()
+  $('.scoreboard').hide()
   $('#change-pw').hide()
   gameEvents.addHandlers()
   authEvents.addHandlers()
