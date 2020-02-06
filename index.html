@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kayla Williams Tic Tac Toe Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1 class="text-center">Tic Tac Toe</h1>
+    <div id= "messageContainer">
+      <p id="pwChangeMessage"></p>
+      <p id="logoutMessage"></p>
+      <p id="signInMessage"></p>
+      <p id="signUpMessage"></p>
+    </div>
+    <div class='form-container'>
+      <form class="sign-up" id='sign-up'>
+        <fieldset>
+          <legend> Sign Up! </legend>
+          <input name='credentials[email]' type='email' placeholder='Email' />
+          <input name='credentials[password]' type='password' placeholder='Password' />
+          <input name='credentials[password_confirmation]' type='password' placeholder='Password Confirmation' />
+          <input type='submit' value='Sign Up!' />
+        </fieldset>
+      </form>
+      <form class="sign-in" id='sign-in'>
+        <fieldset>
+          <legend> Sign In! </legend>
+          <input name='credentials[email]' type='email' placeholder='Email' />
+          <input name='credentials[password]' type='password' placeholder='Password' />
+          <input type='submit' value='Sign In!' />
+        </fieldset>
+      </form>
+      <form id='change-pw'>
+        <fieldset>
+          <legend>Change Password</legend>
+          <input name='passwords[old]' type='password' placeholder='Old Password' />
+          <input name='passwords[new]' type='password' placeholder='New Password' />
+          <input type='submit' value='Change Password' />
+        </fieldset>
+      </form>
+
+      <form id='logout'>
+        <fieldset>
+          <legend>Sign Out</legend>
+          <input type='submit' value='Logout' />
+        </fieldset>
+      </form>
+    </div>
+  </header>
+
+  <div class="container" id="gameBoard">
+    <h2 id='gameMessage'> Start Game </h2>
+    <br>
+    <div class="row">
+      <div class="col-4 box ticbox rounded border-top-0 border-left-0" id="spaceZero" data-cell-index='0'> </div>
+      <div class="col-4 box ticbox rounded border-top-0" id="spaceOne"> </div>
+      <div class="col-4 box ticbox rounded border-top-0 border-right-0" id="spaceTwo"> </div>
+      <div class="col-4 box ticbox rounded border-left-0" id="spaceThree"> </div>
+      <div class="col-4 box ticbox rounded" id="spaceFour"> </div>
+      <div class="col-4 box ticbox rounded border-right-0" id="spaceFive"> </div>
+      <div class="col-4 box ticbox rounded border-left-0 border-bottom-0" id="spaceSix"> </div>
+      <div class="col-4 box ticbox rounded border-bottom-0" id="spaceSeven"> </div>
+      <div class="col-4 box ticbox rounded border-bottom-0 border-right-0" id="spaceEight"> </div>
+    </div>
+  </div>
+  <br>
+  <div class="container d-flex justify-content-center scoreboard">
+    <div class="col-2"> Player One's score <span id="scoreMessage"> 0 </span> </div>
+    <!-- <div class="col-2"> Dance </div> -->
+  </div>
+
+  <div class="button-area">
+    <div class="game-play">
+      <button type="button" class="btn btn btn-light text-center" id="gameStarter"> Start New Game </button>
+      <button type="button" class="btn btn btn-light text-center" id="pastGames"> Show Past Games </button>
+      <!-- <button type="button" class="btn btn btn-light text-center" id="rotate-me"> Rotate Board </button> -->
+    </div>
+    <br>
+    <!-- <p id='quick-test'> </p> -->
+
+    <section id="content"> </section>
+    <div id="messages"> </div>
+  </div>
+
+  <footer>
+    <p> Kayla Williams General Assembly Project 1 </p>
+    <div id="links">
+      <a href="https://www.linkedin.com/in/kayla-williams-2262a296/"> <img border="0" alt="LinkedIn" src="./public/img/LinkedIn_logo.png" width="50" height="50"> </a>
+      <a href="mailto:kaylawilli94@gmail.com" target="_top"><img border="0" alt="LinkedIn" src="./public/img/gmail_logo.png" width="50" height="50"> </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
